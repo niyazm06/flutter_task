@@ -64,11 +64,6 @@ class DatabaseHelper {
     await db.delete(tableShipData);
   }
 
-  Future<List<Map<String, dynamic>>> queryAllRows() async {
-    Database db = await (instance.database);
-    return await db.query(tableShipData);
-  }
-
   Future addShipData(List<ShipsData> data) async {
     Database db = await (instance.database);
     for (var model in data) {
